@@ -3,13 +3,12 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 const firebaseConfig = {
-    apiKey: "AIzaSyAm_s76F-3tLm7JPttiOIbNkfTeNpsNNpI",
-    authDomain: "clone-2429d.firebaseapp.com",
-    projectId: "clone-2429d",
-    storageBucket: "clone-2429d.appspot.com",
-    messagingSenderId: "931377286705",
-    appId: "1:931377286705:web:646daa357dff5b12234f10",
-    measurementId: "G-EHEKNCJ3M4"
+  apiKey:process.env.REACT_APP_FIREBASE_API_KEY ,
+  authDomain:process.env. REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId:process.env. REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_MESSAGING_SENDER,
+  appId:process.env.REACT_APP_APP_ID,
   };
 const firebaseApp=firebase.initializeApp(firebaseConfig)
 const db=firebaseApp.firestore()
